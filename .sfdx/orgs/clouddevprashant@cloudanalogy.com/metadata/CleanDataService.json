@@ -1,0 +1,16 @@
+{
+  "status": 0,
+  "result": {
+    "createdById": "0055i000001KtUEAA0",
+    "createdByName": "Automated Process",
+    "createdDate": "2022-04-17T03:50:33.000Z",
+    "fileName": "cleanDataServices/DataCloudGeoLocation.cleanDataService",
+    "fullName": "DataCloudGeoLocation",
+    "id": "07S5i000000oQztEAE",
+    "lastModifiedById": "0055i000001KtUEAA0",
+    "lastModifiedByName": "Automated Process",
+    "lastModifiedDate": "2022-04-17T03:50:33.000Z",
+    "manageableState": "unmanaged",
+    "type": "CleanDataService"
+  }
+}
