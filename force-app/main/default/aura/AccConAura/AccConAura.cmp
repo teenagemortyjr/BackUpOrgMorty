@@ -1,0 +1,28 @@
+<aura:component  controller="AccConAuraApex" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+     <aura:attribute name="accList" type="List"/>
+    <aura:attribute name="conNameList" type="String"/>
+    
+    <lightning:select aura:Id="selectList" name="select1" label="Select Account-"  onchange="{!c.onSelect}">
+       <option value="null">None</option>
+        <aura:iteration items="{!v.accList}" var="accList">
+            <option value="{!accList.Id}" name="{!accList.Name}">{!accList.Name}</option>
+        </aura:iteration>
+    </lightning:select>
+    
+    
+    <aura:iteration items="{!v.conNameList}" var="item">
+        <p>{!item}</p>
+    </aura:iteration>
+    
+    
+    <!--
+      <aura:iteration items="{!v.accList}" var="item">
+       {!item.Name}
+        <br/>
+    </aura:iteration>
+    -->
+    
+	
+</aura:component>

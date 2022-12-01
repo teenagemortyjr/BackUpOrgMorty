@@ -1,0 +1,29 @@
+<template>
+    <div class="record-create">
+    <lightning-card>
+    <lightning-record-edit-form object-api-name={nameField}  onsuccess={handleSuccess}>
+        <lightning-messages>
+        </lightning-messages>
+        <lightning-input-field  field-name="FirstName" onchange={firstNameHandler} > </lightning-input-field>
+        <lightning-input-field  field-name="LastName" onchange={lastNameHandler} > </lightning-input-field>
+        <lightning-input-field  field-name="Email" onchange={emailHandler} > </lightning-input-field>
+            <lightning-button
+                class="slds-m-top_small"
+                type="submit"
+                label="Create new">
+            </lightning-button>
+    </lightning-record-edit-form>
+</lightning-card> 
+</div>      
+
+
+<div class="contact-name">
+<p> inside loop</p>
+    <template for:each={contactNameList} for:item="con">
+                            <p key={con}>{con}</p>
+       
+                        </template>
+
+</div>
+
+</template>

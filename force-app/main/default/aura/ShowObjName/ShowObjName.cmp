@@ -1,0 +1,25 @@
+<aura:component controller="defaultApex" 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" 
+                access="global" >
+    
+    <aura:attribute name="objName" type="List"/>
+     <aura:attribute name="filedName" type="List"/>
+    <aura:attribute name="selectedObj" type="String"/> 
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <lightning:select  aura:id="objListSelect" label="Select Object" value="{!v.selectedObj}"  onchange="{!c.showFiled}">
+        <option value="none" text=" None " /> 
+        <aura:iteration items="{!v.objName}" var="objName">
+            <option value="{!objList}" name="{!objList}">{!objName}</option>
+         </aura:iteration>
+    </lightning:select>
+    
+    <lightning:select name="nameList1" label="Field Name" >
+        <aura:iteration items="{!v.filedName}" var="filedName">
+            <option value="{!filedName}" name="{!filedName}">{!filedName}</option>
+         </aura:iteration>
+    </lightning:select>
+     <lightning:button variant="brand" label="Show" title="Brand action" onclick="{!c.showFiled}" />
+    
+</aura:component>

@@ -1,0 +1,11 @@
+<template>
+    <div class="card_wrapper">
+        <template for:each={pickVals} for:item ="item">
+            <div class="stageContainer" key={item} style={setWidth}>
+                <h1 class="div column_heading">{item}</h1>
+                <c-kan-ban-list records={records} stage={item} onlistitemdrag={handleListItemDrag} onitemdrop={handleItemDrop} > </c-kan-ban-list>
+            </div>
+        </template>
+    </div>
+   
+</template>

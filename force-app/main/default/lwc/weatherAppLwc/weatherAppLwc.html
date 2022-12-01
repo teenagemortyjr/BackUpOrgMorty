@@ -1,0 +1,94 @@
+<template>
+       <div class="mainDiv">
+
+        
+
+
+        <div class="slds-grid slds-gutters headerDiv">
+          <div class="slds-col HEADTITLE">
+            <span>Forecast</span>
+          </div>
+          <div class="slds-col">
+            <span></span>
+          </div>
+          <div class="slds-col">
+
+<div class="allIcon">
+
+          <lightning-button-icon class="iconStyle" icon-name="utility:refresh" alternative-text="filter"
+        onclick={filter}></lightning-button-icon>
+       
+       <lightning-button-icon  class="iconStyle"   icon-name="utility:pinned" alternative-text="filter"
+        onclick={filter}></lightning-button-icon>
+       
+        <lightning-button-icon class="iconStyle"   icon-name="utility:favorite" alternative-text="filter"
+        onclick={filter}></lightning-button-icon>
+
+       <lightning-button-icon class="iconStyle"   icon-name="utility:threedots" alternative-text="filter"
+       onclick={filter}></lightning-button-icon>
+
+     
+
+</div>
+
+
+<div  class="searchBar">
+  <lightning-input   type="search"  placeholder="Enter Place Name"></lightning-input>
+
+</div>  
+          </div>
+        </div>
+
+      
+
+
+
+
+       <div class="weatherBody">
+
+        <div>
+
+          <div class="slds-grid slds-gutters">
+            <div class="slds-col box-content">
+            
+            </div>
+            <div class="slds-col">
+              <div class="mainTempDiv">
+                <div class="cityName">{cityName}, {countryName}</div>
+              </div>
+           <div class="ImageIcon tempDiv">   <img 
+              src={imageIcon} 
+              height=”100px” 
+              width=”100px”/>
+              
+              <div class="currentTemp">{currentTemp}</div>
+              <div class="tempBtn">
+              <div class="tempInC"><p onclick={changeTempToF}>F</p></div>
+              <div class="tempInF"><p onclick={changeTempToC}>C</p></div>
+              </div>
+            </div>
+              <div class="currentWeather">{currentWeather}</div>
+            </div>
+            <div class="slds-col">
+              
+            </div>
+          </div>
+        </div>
+          
+        
+
+
+        </div>
+
+
+
+
+
+       </div>
+      
+
+        </div>
+      
+    
+    </div>
+</template>

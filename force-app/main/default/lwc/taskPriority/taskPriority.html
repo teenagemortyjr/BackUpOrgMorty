@@ -1,0 +1,10 @@
+<template>
+    <div class="header">
+        <template for:each={tabBar} for:item="item">
+            <div class="stageContainer" key={item} style={setWidth}>
+                <h1 class="div column_heading">{item}</h1>
+                <c-task-priority-List records={records} tabname={item} onlistitemdrag={handleListItemDrag} onitemdrop={handleItemDrop}></c-task-priority-List>
+            </div>
+        </template>
+    </div>
+</template>

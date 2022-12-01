@@ -1,0 +1,33 @@
+<aura:component controller="defaultApex" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    <aura:attribute name="accList" type="List"/>
+    <aura:attribute name="conLastName" type="String" default="tiwari"/>
+    <aura:attribute name="acId"  type="Id"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <p>Create Contact With LookUp From Account</p><br></br>
+    <lightning:input type="string" name="lastname"  value="{!v.conLastName}"/>
+    <div> <P>{!v.conLastName}</P></div>
+	<br></br>
+    <br></br>
+    <P>Select Account:</P>
+    <br></br>
+   
+     <lightning:select aura:Id="selectAccount" label="Account Name"  onchange="{!c.onAccountSelect}" >
+       
+         	<option value="null">None</option>
+            <aura:iteration items="{!v.accList}" var="accList">
+            <option value="{!accList.Id}" name="{!accList.Name}">{!accList.Name}</option>
+          
+        </aura:iteration>
+    </lightning:select>
+    
+    <br></br>
+    
+    <lightning:button variant="brand" label="Create" title="Brand action" onclick="{! c.createContact }"/>
+    
+    
+    
+    
+</aura:component>

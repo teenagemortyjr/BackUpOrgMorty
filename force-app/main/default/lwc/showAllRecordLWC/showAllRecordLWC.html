@@ -1,0 +1,65 @@
+<template>
+    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+
+        <lightning-combobox
+        name="progress"
+        label="Select Object"
+        value={value}
+        placeholder="Select Object"
+        options={customObjectNameList}
+        onchange={onSelectObject} ></lightning-combobox>
+<br>
+
+   
+        <lightning-card title="Select Fields">
+            <div class="slds-p-around_small">
+                <lightning-dual-listbox name="languages"
+                                        label="Field"
+                                        source-label="Available"
+                                        selected-label="Selected Field"
+                                        field-level-help="Select your preferred Field"
+                                        options={ObjectFieldList}
+                                        onchange={handleChange}></lightning-dual-listbox>
+                                        <br/>
+                <template if:true={lstSelected}>
+                    <strong>You Selected: </strong>
+                    <template for:each={lstSelected} for:item="sel">
+                            <lightning-badge label={sel} key={sel} class="slds-badge_inverse">                 
+                            </lightning-badge>    
+                    </template>
+                </template>
+            </div>
+        </lightning-card>
+
+      
+    </div>
+      
+   <template if:true={isRecordAvailable} >
+    <lightning-card title={selectedObject}>
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+            <thead>
+            
+                <tr >
+                    <template for:each={columns} for:item="item">                                          
+                        <td key={item.fieldName}>
+                            <div class="slds-truncate" title={item.label}><b>{item.fieldName}</b></div>
+                        </td>
+                    </template>
+                </tr> 
+              
+              
+            </thead>
+            <tbody>
+                <tr >
+                    <template for:each={selectedRecord2} for:item="item">                                          
+                        <td key={item.fieldName}>
+                            <div class="slds-truncate" title={item.label}><b>{item.fieldName}</b></div>
+                        </td>
+                    </template>
+                </tr> 
+            </tbody>
+
+          </table>
+    </lightning-card>
+    </template>
+</template>

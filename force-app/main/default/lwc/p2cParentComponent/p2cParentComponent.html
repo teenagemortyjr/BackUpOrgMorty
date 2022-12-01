@@ -1,0 +1,16 @@
+<template>
+    <div>
+    <lightning-button variant="brand" label="Show Error" title="Primary action" onclick={setFlagFalse} class="slds-m-left_x-small"></lightning-button>
+  
+   </div>
+
+<template if:true={isFlagTrue}>
+
+    <c-p2c-alert-component   message = "Error while loading page">
+   
+    </c-p2c-alert-component>
+
+</template>
+
+
+</template>

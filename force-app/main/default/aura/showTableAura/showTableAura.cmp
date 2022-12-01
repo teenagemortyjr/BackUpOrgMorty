@@ -1,0 +1,39 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	
+    <aura:attribute name="number" type="integer" />
+    <aura:attribute name="count" type="integer" />
+    <aura:attribute name="numList" type="list" />
+    <aura:attribute name="flag" type="boolean" default="false"/>
+    
+   <div>
+    
+	<ui:inputNumber value="{!v.number}" updateOn="keyup"/> <br/><br/>
+    <ui:inputNumber value="{!v.count}" updateOn="keyup"/> <br/>
+    
+    
+    
+       
+    
+       <P>Table is Here--></P>
+       
+       <lightning:button variant="brand" label="show Table" title="Brand action" onclick="{!c.showTable}" />
+       
+       
+       
+       
+        <aura:if isTrue="{!v.flag}">
+            
+        <aura:iteration items="{!v.numList}" var="item">
+            
+             <p>{!v.number}*{!item} = {!item *!number}</p>
+             <br></br> 
+  		</aura:iteration>
+            <aura:set attribute="else">
+                False
+           </aura:set>
+       
+        </aura:if>
+
+    </div>  
+    
+</aura:component>

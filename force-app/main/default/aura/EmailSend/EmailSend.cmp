@@ -1,0 +1,15 @@
+<aura:component   implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    <ui:inputEmail aura:id="email" label="Email" class="field" value="manager@email.com"/>  
+    <ui:button class="btn" label="Submit" press="{!c.setOutput}"/>	
+	<ui:inputTextArea aura:id="comments" label="Comments"  value="My comments" rows="5"/>
+     <ui:button class="btn" label="Submit" press="{!c.setOutput}"/>	
+     
+     <div aura:id="msg" class="hide">
+		You entered: <ui:outputTextArea aura:id="oTextarea" value=""/>
+	</div>
+	<div aura:id="msg" class="hide">
+	    You entered: <ui:outputEmail aura:id="oEmail" value="Email" />
+	</div>
+    
+</aura:component>

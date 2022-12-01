@@ -1,0 +1,47 @@
+<aura:component controller="defaultApex" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    <aura:attribute name = "flagForLogin" type  = "Boolean" default="true"/>
+    <aura:attribute name = "flagForSignUp" type  = "Boolean" default="false"/>
+    <aura:attribute name = "userName" type = "String" />
+    <aura:attribute name = "userPass" type = "String"/>
+    <aura:attribute name = "todoFlag" type="Boolean" default="false"/>
+    <aura:attribute name = "todoList" type="String" />
+    <aura:attribute name= "newTodo" type="String"/>
+    
+     <aura:if isTrue="{!v.todoFlag}">
+         <div class="this">
+          Todo List:-
+          {!v.todoList}
+             
+              <lightning:input type="text" name="input1" label="new todo" value="{!v.newTodo}" />
+              <lightning:button variant="brand" label="Add" title="Brand action" onclick="{!c.addTodo}" />
+         </div>          
+      </aura:if> 
+    
+     <aura:if isTrue="{!v.flagForSignUp}">
+         
+         <c:SignUpFormAura/>
+          
+      </aura:if> 
+
+	
+     <aura:if isTrue="{!v.flagForLogin}">
+         
+          <div class="this">
+     
+       <div  style ="width: 256px">
+        <h2 >Todo List Login </h2>
+       <br></br>
+        <lightning:input type="text" name="input1" label="username" value="{!v.userName}" />
+        <lightning:input type="password" name="input2" label="password" value="{!v.userPass}"/>
+        <lightning:button variant="brand" label="Login" title="Brand action" onclick="{! c.loginBtn }" />
+        <lightning:button variant="base" label="Sign Up" title="Base action" onclick="{! c.signUpbtn }"/>
+
+      </div>
+        </div>
+      </aura:if> 
+
+          
+   
+    
+</aura:component>

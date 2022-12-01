@@ -1,0 +1,33 @@
+<aura:component  controller="CreateAccountApex" implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+    
+    <aura:attribute name="oppList" type="List"/>
+   	<aura:attribute name="today" type="Date" default=""/>
+    <aura:attribute name="oppId"  type="Id" />
+    <aura:attribute name="newDate" type="Date" default=""/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    
+    
+
+    <lightning:select aura:Id ="opportunityListSlect"  label="Opportuntiy List->"   onchange="{!c.setOppId}">
+       <option value="Null">None</option>
+        		<aura:iteration items="{!v.oppList}" var="oppList">
+            		
+            		<option value="{!oppList.Id}" name="{!oppList.Name}">{!oppList.Name}</option>
+        		 </aura:iteration>
+    </lightning:select>
+
+    
+    
+	
+
+	
+    <ui:inputDate aura:id="expdate" label="Today's Date" class="field" value="{!v.today}" displayDatePicker="true" />      
+    <ui:button class="btn" label="Submit" press="{!c.onOppSelect2}"/>	
+
+	
+    
+    
+    
+</aura:component>

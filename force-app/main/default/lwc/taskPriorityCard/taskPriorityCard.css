@@ -1,0 +1,10 @@
+.slds-item{
+    border: 1px solid #d8dde6;
+    border-radius: 0.25rem;
+    background-clip: padding-box;
+    padding: 2.45rem;
+    margin: 0.25rem;
+}
+.slds-truncate{
+    font-size: 20px
+}

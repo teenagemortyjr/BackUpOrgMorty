@@ -1,0 +1,20 @@
+<aura:component  controller="ClickbuttonApex" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+   
+    <lightning:button variant="destructive-text" label="Destructive Text" title="Destructive action" onclick="{! c.showAlert }"/>
+    <aura:Attribute name="count" type="Integer" default='1'/>
+    <aura:Attribute name="size" type="Integer"  default='30'/>
+    
+    
+    
+    <p style="font-size: 30px">
+        
+     <center>{!v.count}</center>  
+
+
+	</p>
+    
+    
+	
+    
+</aura:component>

@@ -1,0 +1,26 @@
+.header{
+    background: black;
+    color:white;
+    width: 60vw;
+}
+
+.game-container{
+    width: 60vw;
+    height: 60vh;
+    background: rgb(232, 56, 56);
+}
+
+.game-container div{
+    width: 20px;
+    height: 20px;
+    background:white ;
+    display: inline-block;
+}
+
+.snake{
+    background: black !important;
+}
+
+.food{
+    background: red  !important;
+}

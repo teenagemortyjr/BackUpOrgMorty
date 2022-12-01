@@ -1,0 +1,18 @@
+<aura:component controller="defaultApex" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+
+    <aura:attribute name="userName" type="string"/>
+    <aura:attribute name="password" type="string"/>
+    <aura:attribute name="flag"     type="boolean" default='null'/>
+    
+    
+  
+    
+<p>Login </p>
+    <lightning:input aura:id="userNameInput" type="Text" name="input1" label="UserName" value="{!v.userName}" /><br></br>
+    <lightning:input aura:id="passInput" type="password" name="input1" label="Password" value="{!v.password}"/><br></br><br></br>
+    <lightning:button variant="brand" label="Login" title="Brand action" onclick="{! c.onClick}" />
+    
+          
+    
+    
+</aura:component>

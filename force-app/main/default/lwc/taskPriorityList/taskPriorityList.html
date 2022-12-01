@@ -1,0 +1,15 @@
+<template>
+    <ul class="slds-has-dividers_around-space dropZone" style="height:70vh; overflow-y:auto;"
+        ondrop={handleDrop} ondragover={handleDragOver} >
+        <template for:each={records} for:item="item">
+            <div class="list" key={item.Id}>
+            <li>
+                <c-task-priority-card record={item} tabname={tabname} onitemdrag={onItemDragHandler}></c-task-priority-card>
+            </li>
+        </div>
+        </template>
+       
+    </ul>
+        
+    
+</template>

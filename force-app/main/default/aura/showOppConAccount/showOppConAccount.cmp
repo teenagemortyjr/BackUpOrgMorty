@@ -1,0 +1,47 @@
+<aura:component  controller="CreateAccountApex" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    <aura:attribute name="account" type="Account"/>
+    <aura:attribute name="contact" type="List"/>
+    <aura:attribute name="opportunity" type="List"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.onLoad}"/>
+    <body>
+        <br></br>
+        <br></br>
+   <div>
+    <lightning:select aura:Id="selectAccount" label="Account Name"  onchange="{!c.onAccountSelect}" >
+       
+         	<option value="null">None</option>
+            <aura:iteration items="{!v.account}" var="account">
+            <option value="{!account.Id}" name="{!account.Name}">{!account.Name}</option>
+          
+        </aura:iteration>
+    </lightning:select>
+    </div>
+        <hr style="height:5px"></hr>
+        <br></br>
+        <br></br>
+        
+         <div>
+    <lightning:select name="ContactList" label="Contact List" >
+       
+         	<option value="null">None</option>
+            <aura:iteration items="{!v.contact}" var="contact">
+            <option value="{!contact}" name="{!contact}">{!contact}</option>
+           </aura:iteration>
+    </lightning:select>
+    </div>
+        
+        
+         <div>
+    <lightning:select name="OpportunityList" label="Opportunity List">
+       
+         	<option value="null">None</option>
+            <aura:iteration items="{!v.opportunity}" var="opportunity">
+            <option value="{!opportunity}" name="{!opportunity}">{!opportunity}</option>
+           </aura:iteration>
+        
+    </lightning:select>
+    </div>
+    </body>
+</aura:component>

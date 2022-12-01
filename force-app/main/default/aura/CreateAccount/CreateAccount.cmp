@@ -1,0 +1,58 @@
+<aura:component controller="CreateAccountApex" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    
+    <aura:attribute name="accountName" type="String" />
+    <aura:attribute name="phone" type="String" />
+    <aura:attribute name="rating" type="String" />
+    <aura:attribute name="accountNumber" type="String" />
+    <aura:attribute name="numberOfEmployee" type="Integer" />
+    
+   
+ <div> 
+     Account Name:
+    <lightning:input type="text" aura:id="accName"    value="{!v.accountName}"/>
+
+     
+     <br></br>
+     <br></br>
+     
+     
+
+     Account Number:
+     <lightning:input type="text" id="acNumber" value="{!v.accountNumber}" />
+      
+     <br></br>
+     <br></br>
+    
+     
+     Rating:  
+     <lightning:input type="text" id="rating" value="{!v.rating}" />
+     
+     <br></br>
+     <br></br>
+     
+     Phone:  
+     <lightning:input type="text" id="Phone" value="{!v.phone}"/>
+     
+     <br></br>
+     <br></br>
+    
+
+     
+     Number of Employee:  
+     <lightning:input type="text" id="NumberOfEmp" value="{!v.numberOfEmployee}"/>
+     <br></br>
+     
+  </div>
+     <br></br>
+     <br></br>
+     <br></br>
+     <br></br>
+    	
+       
+
+    
+    <lightning:button type="submit"  label="submit" onclick="{!c.insert}"/>
+    
+    
+</aura:component>

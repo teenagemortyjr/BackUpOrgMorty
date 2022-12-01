@@ -1,0 +1,49 @@
+<aura:component controller="defaultApex" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    <aura:attribute name = "flagForLogin" type  = "Boolean" default="false"/>
+    <aura:attribute name = "flagForSignUp" type  = "Boolean" default="true"/>
+    
+    <aura:attribute name= "name" type="String"/>
+    <aura:attribute name= "userName" type="String"/>
+    <aura:attribute name= "password" type="String"/>
+    <aura:attribute name= "passwordRepeat" type="String"/>
+    
+    <aura:if isTrue="{!v.flagForSignUp}">
+         <div class="this">
+     
+   <div  style ="width: 256px">
+        <h2 >Todo List Sign Up </h2>
+       <br></br>
+        <lightning:input type="text" name="input0" label="Full Name" value="{!v.name}" />
+        <lightning:input type="text" name="input1" label="username" value="{!v.userName}" />
+        <lightning:input type="password" name="input2" label="password" value="{!v.password}" />
+       <lightning:input type="password" name="input3" label="password" value="{!v.passwordRepeat}"/>
+       
+        <lightning:button variant="brand" label="Create Account" title="Brand action" onclick="{! c.signUpBtn }" />
+        <lightning:button variant="brand" label="Login" title="Brand action" onclick="{! c.loginBtn }" />
+
+    </div>
+        </div>
+
+    
+      </aura:if> 
+    
+    
+    
+    
+    <aura:if isTrue="{!v.flagForLogin}">
+        <c:LoginPageAura/>
+        
+              </aura:if> 
+    
+    
+    
+    
+
+    
+    
+     
+  
+    
+    
+</aura:component>

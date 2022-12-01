@@ -1,0 +1,14 @@
+<template>
+    <div class="backgroundDiv">
+    <div class="mainDiv">
+        <lightning-card title="Quotes">
+    <div class="mainText">{currentQuote}</div></lightning-card>
+    <template if:true={nextBtnVisible}>
+<div class="nextBtn"> <lightning-button variant="success"  label="Next"  title="Successful action" onclick={nextQuoteHandler} class="slds-m-left_x-small" disabled={nextBtnDisabled}></lightning-button> </div></template>
+    </div>
+
+    <template if:true={prevBtnVisible}>
+    <div class="prevBtn"> <lightning-button variant="brand" label="Previous" title="Successful action" onclick={prevQuoteHandler} class="slds-m-left_x-small" disabled={prevBtnDisabled}></lightning-button></div></template>
+
+</div>
+</template>

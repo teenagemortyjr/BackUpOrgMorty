@@ -1,0 +1,30 @@
+<template>
+
+    
+
+
+ 
+    <lightning-card >
+      
+        <div class="slds-m-left_large"> {title} </div>
+        <lightning-combobox
+        name="Account List"
+        label="Account List"
+        value={filterType}
+        placeholder="Account List"
+        options={getOptions}
+        onchange={typeHandler} ></lightning-combobox>
+
+        <template if:false={accListIsEmpty}>
+          <template for:each={filteredAccounts.data} for:item="account">
+            <div class="slds-box slds-box__xx-small" key={account.Id}>
+              <p><strong>Name:</strong>{account.Name}</p>
+              <p><strong>Type:</strong>{account.Type}</p>
+            </div>
+          </template>
+
+        </template>
+
+    </lightning-card>
+
+</template>

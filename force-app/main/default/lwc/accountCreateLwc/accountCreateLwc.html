@@ -1,0 +1,53 @@
+<template>
+  <lightning-card title="Account DeshBoard" icon-name="standard:account">
+    <lightning-button-icon icon-name="utility:pinned" alternative-text="pinned"
+      class="slds-p-around_xx-small slds-float_left pin" onclick={pinClick}></lightning-button-icon>
+
+
+    <div class="import-new-btn">
+
+      <lightning-button label="Import" title="Non-primary action" onclick={handleClick} class="slds-float_right">
+      </lightning-button>
+      <lightning-button label="New" title="Non-primary action" onclick={handleClick} class="slds-float_right">
+      </lightning-button>
+    </div>
+
+
+    <br />
+    <br />
+    <div>
+      <lightning-input  class ="inputField" type="text"  placeholder="Search Account .."></lightning-input>
+
+
+        <lightning-button-icon icon-name="utility:filterList" alternative-text="filter"
+          class="slds-p-around_xx-small slds-float_right" onclick={filter}></lightning-button-icon>
+
+        <lightning-button-icon icon-name="utility:chart" alternative-text="Charts"
+          class="slds-p-around_xx-small slds-float_right" onclick={charts}></lightning-button-icon>
+        <lightning-button-icon icon-name="utility:edit" alternative-text="Edit"
+          class="slds-p-around_xx-small slds-float_right" onclick={edit}></lightning-button-icon>
+
+        <lightning-button-icon icon-name="utility:refresh" alternative-text="Refresh"
+          class="slds-p-around_xx-small slds-float_right" onclick={refreshTable}></lightning-button-icon>
+
+        <lightning-button-icon icon-name="utility:table" alternative-text="Table"
+          class="slds-p-around_xx-small slds-float_right" onclick={table}></lightning-button-icon>
+        <lightning-button-icon icon-name="utility:settings" alternative-text="Settings"
+          class="slds-p-around_xx-small slds-float_right" onclick={settings}></lightning-button-icon>
+      </div>
+
+     <div>
+    </div>
+
+ 
+  </lightning-card>
+
+  <div class="l-dataTable">
+    <lightning-datatable key-field="id"  data = {data} columns={columns}>
+    </lightning-datatable>
+  </div>
+
+
+
+
+</template>

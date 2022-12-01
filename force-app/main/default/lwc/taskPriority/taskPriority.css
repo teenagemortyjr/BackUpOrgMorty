@@ -1,0 +1,26 @@
+.header{
+    
+margin: 6px;
+padding: 0.5rem;
+display: flex;
+justify-content: space-around;
+background: rgb(255, 255, 255);
+font-weight: bold;
+
+}   
+
+.column_heading{
+    padding: 0.5rem 0.25rem;
+    font-size: 16px;
+    background: #005fb2;
+    color: #fff;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.stageContainer{
+    float:center;
+    border: 2px solid #d8dde6;
+    margin: 0.05rem;
+    border-radius: .25rem;
+}

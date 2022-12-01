@@ -1,0 +1,34 @@
+<aura:component   controller="CreateAccountApex"   implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+
+<aura:attribute name="record" type="object"/>
+<aura:attribute name="OppRecord" type="object"/>
+<aura:attribute name="oppId" type="Id"/>
+<aura:attribute name="today" type="Date" />
+
+
+<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+
+<!--
+<force:recordData aura:Id="record"
+recordId="{!v.recordId}"
+targetRecord="{v.record}"
+targetField="{v.oppRecord}"
+mode="VIEW"/>
+*/
+-->
+
+
+
+
+  
+<ui:inputDate aura:id="expdate" label="Close Date" class="form-control"
+   value="{!v.today}" displayDatePicker="true" />
+   
+     <lightning:button name="Change ClosedDate" label="Change"
+      onclick="{!c.changeCloseDate}"/>
+
+
+
+	
+</aura:component>

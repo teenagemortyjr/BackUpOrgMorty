@@ -1,0 +1,50 @@
+<template>
+    <template if:true={checkTabNameisTask}>
+        <li class="slds-item slds-var-m-around_small" draggable="true" ondragstart={itemDragStart}>
+            <article class="slds-tile slds-tile_board">
+                <h1 class="slds-truncate" title={record.Name}>
+                        <span class="slds-truncate"  data-id={record.Id}>
+                         {record.Task}
+                        </span>
+                </h1>
+            </article>
+        </li>
+    </template>
+ 
+    <template if:true={checkTaskNameIsMedium}>
+        <li class="slds-item slds-var-m-around_small" style={setColor} draggable="true" ondragstart={itemDragStart}>
+            <article class="slds-tile slds-tile_board">
+                <h1 class="slds-truncate" title={record.Name}>
+                        <span class="slds-truncate"   data-id={record.Id}>
+                         {record.Task}
+                        </span>
+                </h1>
+            </article>
+        </li>
+    </template>
+
+    <template if:true={checkTaskNameIsHigh}>
+        <li class="slds-item slds-var-m-around_small" style={setColor} draggable="true" ondragstart={itemDragStart}>
+            <article class="slds-tile slds-tile_board">
+                <h1 class="slds-truncate" title={record.Name}>
+                        <span class="slds-truncate"   data-id={record.Id}>
+                         {record.Task}
+                        </span>
+                </h1>
+            </article>
+        </li>
+    </template>
+
+    <template if:true={checkTaskNameIsLow}>
+        <li class="slds-item slds-var-m-around_small" style={setColor} draggable="true"  ondragstart={itemDragStart}>
+            <article class="slds-tile slds-tile_board">
+                <h1 class="slds-truncate" title={record.Name}>
+                        <span class="slds-truncate"  data-id={record.Id}>
+                         {record.Task}
+                        </span>
+                </h1>
+            </article>
+        </li>
+    </template>
+
+</template>

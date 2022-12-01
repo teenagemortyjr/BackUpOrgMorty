@@ -1,0 +1,118 @@
+.headBar {
+    width: 100%;
+    height: 50px;
+    background-color: #0a71ab;
+}
+
+.HEADTITLE{
+    padding-top: 10px;
+font-weight: bold;
+font-size: 18PX;
+}
+
+.headText {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+    padding-top: 15px;
+}
+
+.iconStyle{
+
+    margin-left: 17px;
+}
+
+
+
+
+.headerDiv{
+
+    height:50px ;
+    background-color: blue;
+
+}
+
+.weatherBody {
+
+    height: 1000px;
+    margin-top: 2%;
+    width: auto;
+
+
+}
+
+.currentTemp {
+
+    background-color: azure;
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+
+
+}
+
+.allIcon{
+
+float: left;
+padding-top: 10px;
+
+}
+
+
+.box-content {
+    height: 13rem;
+    width: 20rem;
+}
+
+
+.cityName {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-left: 50px;
+}
+
+.currentTemp {
+
+    font-size: 5rem;
+    background: none;
+
+
+}
+
+.searchBar{
+    height: 200px;
+    width: 40%;
+    float: right;
+
+}
+
+.tempDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+
+
+.tempBtn{
+    margin-left: 30px;
+
+    flex-direction: column;
+
+    font-size: 21px;
+
+
+}
+
+
+.currentWeather{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+   
+    margin-left: 90px;
+}
